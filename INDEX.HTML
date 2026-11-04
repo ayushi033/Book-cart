@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookCart | Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">📚 Book<span>Cart</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#cart">My Cart</a>
+        </nav>
+
+        <a href="#cart" class="cart-link">
+            🛒 Cart <span id="cart-count">0</span>
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO BOOKCART</p>
+            <h1>Find Your Next<br>Favourite Book.</h1>
+            <p>
+                Explore a world of stories, knowledge and imagination.
+                Discover books you'll love.
+            </p>
+            <a href="#books" class="hero-btn">Explore Books →</a>
+        </div>
+        <div class="hero-icon">📖</div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Books Section -->
+        <section class="books-section" id="books">
+
+            <div class="section-heading">
+                <div>
+                    <p class="tagline">OUR COLLECTION</p>
+                    <h2>Explore Our Books</h2>
+                </div>
+                <span class="book-count" id="book-count">8 Books</span>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search books by title or author..."
+                >
+                <button id="search-btn">🔍 Search</button>
+            </div>
+
+            <div class="book-grid" id="book-list">
+                <!-- Books are displayed using JavaScript -->
+            </div>
+
+            <p id="no-results" class="no-results" hidden>
+                No books found. Try another search.
+            </p>
+        </section>
+
+        <!-- Shopping Cart Section -->
+        <aside class="cart-section" id="cart">
+
+            <div class="cart-heading">
+                <h2>🛒 Your Cart</h2>
+                <span id="cart-items-count">0 Items</span>
+            </div>
+
+            <div id="cart-items">
+                <!-- Cart items are displayed using JavaScript -->
+            </div>
+
+            <div id="empty-cart" class="empty-cart">
+                <div>🛍️</div>
+                <h3>Your cart is empty!</h3>
+                <p>Add some books to start shopping.</p>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="delivery">Free</span>
+                </div>
+
+                <div class="summary-row total-row">
+                    <strong>Total Amount</strong>
+                    <strong id="total">₹0</strong>
+                </div>
+
+                <button id="checkout-btn" class="checkout-btn" disabled>
+                    Proceed to Checkout →
+                </button>
+
+                <p class="secure-text">🔒 Your shopping cart is saved locally.</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>📚 BookCart</h2>
+        <p>Your favourite books, all in one place.</p>
+        <p class="copyright">
+            © 2026 BookCart. All Rights Reserved.
+        </p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
